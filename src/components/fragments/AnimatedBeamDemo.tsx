@@ -53,7 +53,7 @@ export function AnimatedBeamDemo() {
             <Icons.notion />
           </Circle>
           <Circle ref={div4Ref} className='size-16'>
-            <Icons.notion /> saya mau di isii foto saya
+            <Icons.notion />
           </Circle>
           <Circle ref={div6Ref}>
             <Icons.zapier />
