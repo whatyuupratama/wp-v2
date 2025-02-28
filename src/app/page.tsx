@@ -8,8 +8,9 @@ import { Badge } from '@/components/ui/badge';
 import { DATA } from '@/data/resume';
 import Link from 'next/link';
 import Markdown from 'react-markdown';
-import { TiLocationArrowOutline } from 'react-icons/ti';
 
+import Buttonn from '@/components/fragments/Buttonn';
+import { InteractiveHoverButtonDemo } from '../components/fragments/InteractiveHoverButtonDemo';
 const BLUR_FADE_DELAY = 0.04;
 
 export default function Page() {
@@ -23,7 +24,7 @@ export default function Page() {
                 delay={BLUR_FADE_DELAY}
                 className='text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none'
                 yOffset={8}
-                text={`Hi, I'm ${DATA.name.split(' ')[0]} 👨🏻‍💻`}
+                text={`Hi, I'm ${DATA.name.split(' ')[0]} 🥷`}
               />
               <BlurFadeText
                 className='max-w-[600px] md:text-xl'
@@ -66,7 +67,6 @@ export default function Page() {
                 altText={work.company}
                 title={work.company}
                 subtitle={work.title}
-                href={work.href}
                 badges={work.badges}
                 period={`${work.start} - ${work.end ?? 'Present'}`}
                 description={work.description}
@@ -141,7 +141,6 @@ export default function Page() {
                   key={project.title}
                   title={project.title}
                   description={project.description}
-                  dates={project.dates}
                   tags={project.technologies}
                   image={project.image}
                   video={project.video}
@@ -158,18 +157,17 @@ export default function Page() {
             <div className='flex flex-col items-center justify-center space-y-4 text-center'>
               <div className='space-y-2'>
                 <div className='inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm'>
-                  Hackathons
+                  Certifications
                 </div>
                 <h2 className='text-3xl font-bold tracking-tighter sm:text-5xl'>
-                  I like building things
+                  I like to learn
                 </h2>
-                <p className='text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed'>
-                  During my time in university, I attended{' '}
-                  {DATA.hackathons.length}+ hackathons. People from around the
-                  country would come together and build incredible things in 2-3
-                  days. It was eye-opening to see the endless possibilities
-                  brought to life by a group of motivated and passionate
-                  individuals.
+                <p className='text-muted-foreground md:text-lg/relaxed lg:text-base/relaxed xl:text-lg/relaxed'>
+                  During my studies, I completed MSIB Batch 7, DBS Machine
+                  Learning, HKI Product Digital Certification, and Inbound
+                  Kampus Merdeka Mandiri at Universitas Negeri Malang. I took
+                  15+ courses and interned at three companies, gaining practical
+                  experience and industry insights
                 </p>
               </div>
             </div>
@@ -192,14 +190,17 @@ export default function Page() {
                 </BlurFade>
               ))}
             </ul>
-            <Link
+            {/* <Link
               href={'https://www.linkedin.com/in/wahyupratamaa'}
               target='_blank'
             >
               <span className='text-sm flex gap-2'>
                 More on my LinkedIn <TiLocationArrowOutline size={20} />
               </span>
-            </Link>
+            </Link> */}
+            {/* <Buttonn value='More on my LinkedIn' />
+             */}
+            <InteractiveHoverButtonDemo />
           </BlurFade>
         </div>
       </section>
