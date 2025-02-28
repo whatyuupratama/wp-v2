@@ -90,7 +90,9 @@ const TrueFocus: React.FC<TrueFocusProps> = ({
         return (
           <span
             key={index}
-            ref={(el) => (wordRefs.current[index] = el)}
+            ref={(el: HTMLSpanElement | null) => {
+              wordRefs.current[index] = el;
+            }}
             className={`focus-word ${manualMode ? 'manual' : ''} ${
               isActive && !manualMode ? 'active' : ''
             }`}

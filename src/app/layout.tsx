@@ -7,6 +7,7 @@ import type { Metadata } from 'next';
 import { Inter as FontSans } from 'next/font/google';
 import './globals.css';
 import Head from 'next/head';
+import IconTitle from '../public/icontitle.svg'; // Pastikan file ini tersedia
 
 const fontSans = FontSans({
   subsets: ['latin'],
@@ -22,7 +23,6 @@ export const metadata: Metadata = {
   openGraph: {
     title: `${DATA.name}`,
     description: DATA.description,
-
     siteName: `${DATA.name}`,
     locale: 'en_US',
     type: 'website',
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     yandex: '',
   },
   icons: {
-    icon: '/profile.svg',
+    icon: '/icontitle.svg', // Pastikan ini file yang ada atau diubah ke file yang sesuai
   },
 };
 
@@ -59,7 +59,8 @@ export default function RootLayout({
   return (
     <html lang='en' suppressHydrationWarning>
       <Head>
-        <link rel='icon' href='/profile.svg' /> {/* Add this line */}
+        <link rel='icon' href='/icontitle.svg' />{' '}
+        {/* Perbaiki penulisan href */}
       </Head>
       <body
         className={cn(
