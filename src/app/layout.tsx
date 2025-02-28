@@ -6,6 +6,7 @@ import { cn } from '@/lib/utils';
 import type { Metadata } from 'next';
 import { Inter as FontSans } from 'next/font/google';
 import './globals.css';
+import Head from 'next/head';
 
 const fontSans = FontSans({
   subsets: ['latin'],
@@ -45,6 +46,9 @@ export const metadata: Metadata = {
     google: '',
     yandex: '',
   },
+  icons: {
+    icon: '/profile.svg',
+  },
 };
 
 export default function RootLayout({
@@ -54,6 +58,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en' suppressHydrationWarning>
+      <Head>
+        <link rel='icon' href='/profile.svg' /> {/* Add this line */}
+      </Head>
       <body
         className={cn(
           'min-h-screen bg-background font-sans antialiased max-w-2xl mx-auto py-12 sm:py-24 px-6',
