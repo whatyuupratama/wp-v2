@@ -19,6 +19,7 @@ import { OrbitingCircles } from '@/components/magicui/orbiting-circles';
 import Icons from '@/components/fragments/Icons';
 import { AnimatedListDemo } from '@/components/fragments/AnimatedListDemo';
 import { BlurFadeDemo } from '@/components/fragments/gridimage/BlurFadeDemo';
+import TrueFocus from '@/components/fragments/textfocus/TrueFocus';
 const BLUR_FADE_DELAY = 0.04;
 
 export default function Page() {
@@ -31,11 +32,19 @@ export default function Page() {
         <div className='mx-auto w-full max-w-2xl space-y-8'>
           <div className='gap-2 flex justify-between'>
             <div className='flex-col flex flex-1 space-y-1.5 relative z-10'>
-              <BlurFadeText
+              {/* <BlurFadeText
                 delay={BLUR_FADE_DELAY}
                 className='text-3xl font-bold tracking-tighter sm:text-5xl xl:text-5xl/none'
                 yOffset={8}
                 text={`Hi, I'm ${DATA.name.split(' ')[0]} 🥷`}
+              /> */}
+              <TrueFocus
+                sentence={`Hi, I'm Wahyu 🥷`}
+                manualMode={false}
+                blurAmount={5}
+                borderColor='red'
+                animationDuration={2}
+                pauseBetweenAnimations={1}
               />
               <BlurFadeText
                 className='max-w-[600px] md:text-xl'
@@ -82,14 +91,14 @@ export default function Page() {
           <h2 className='text-xl font-bold'>Image Owner</h2>
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
-          <Markdown className='prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert mb-10'></Markdown>
+          <Markdown className='prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert mb-6'></Markdown>
           <BlurFadeDemo />
         </BlurFade>
       </section>
       <section id='work'>
         <div className='flex min-h-0 flex-col gap-y-3'>
           <BlurFade delay={BLUR_FADE_DELAY * 5}>
-            <h2 className='text-xl font-bold'>Work Experience</h2>
+            <h2 className='text-xl font-bold'>Experience</h2>
           </BlurFade>
           {DATA.work.map((work, id) => (
             <BlurFade
@@ -181,7 +190,6 @@ export default function Page() {
                   description={project.description}
                   tags={project.technologies}
                   image={project.image}
-                  video={project.video}
                   links={project.links}
                 />
               </BlurFade>

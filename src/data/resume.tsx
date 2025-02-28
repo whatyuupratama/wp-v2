@@ -4,9 +4,7 @@ import { HomeIcon, NotebookIcon } from 'lucide-react';
 export const DATA = {
   name: 'Wahyu Pratama',
   initials: 'DV',
-  url: 'https://dillion.io',
-  location: 'San Francisco, CA',
-  locationLink: 'https://www.google.com/maps/place/sanfrancisco',
+  location: 'Malang,idn',
   description:
     'College Student turned Frontend Developer, Active on GDG Surabaya, TikTok, Linkedin, and Medium.',
   summary:
@@ -37,17 +35,17 @@ export const DATA = {
     email: 'hello@example.com',
     tel: '+123456789',
     social: {
-      GitHub: {
-        name: 'GitHub',
-        url: 'https://github.com/wahyupratamaaa',
-        icon: Icons.github,
-
-        navbar: true,
-      },
       LinkedIn: {
         name: 'LinkedIn',
         url: 'https://www.linkedin.com/in/wahyupratamaa',
         icon: Icons.linkedin,
+
+        navbar: true,
+      },
+      GitHub: {
+        name: 'GitHub',
+        url: 'https://github.com/wahyupratamaaa',
+        icon: Icons.github,
 
         navbar: true,
       },
@@ -163,7 +161,6 @@ export const DATA = {
         },
       ],
       image: '',
-      video: '/semple.png',
     },
     {
       title: 'Vertex Summarizer',
@@ -179,7 +176,6 @@ export const DATA = {
         },
       ],
       image: '',
-      video: '/public/semple.png',
     },
     {
       title: 'Aube Parfum',
@@ -195,7 +191,6 @@ export const DATA = {
         },
       ],
       image: '',
-      video: '/public/semple.png',
     },
     {
       title: 'Madura 24Jam',
@@ -211,7 +206,6 @@ export const DATA = {
         },
       ],
       image: '',
-      video: '/public/semple.png',
     },
     {
       title: 'Conseling Institut ASIA',
@@ -234,7 +228,6 @@ export const DATA = {
         },
       ],
       image: '',
-      video: '/public/semple.png',
     },
   ],
   hackathons: [
