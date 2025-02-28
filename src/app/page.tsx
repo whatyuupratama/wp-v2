@@ -1,5 +1,5 @@
 import { HackathonCard } from '@/components/hackathon-card';
-import BlurFade from '@/components/magicui/blur-fade';
+import { BlurFade } from '@/components/magicui/blur-fade';
 import BlurFadeText from '@/components/magicui/blur-fade-text';
 import { ProjectCard } from '@/components/project-card';
 import { ResumeCard } from '@/components/resume-card';
@@ -14,20 +14,26 @@ import { InteractiveHoverButtonDemo } from '../components/fragments/InteractiveH
 import SplashCursor from '../components/fragments/cursor/SplashCursor';
 import { MarqueeDemo } from '@/components/fragments/MarqueeDemo';
 import { AnimatedBeamDemo } from '@/components/fragments/AnimatedBeamDemo';
+import BlobCursor from '@/components/fragments/cursor/BlobCursor';
+import { OrbitingCircles } from '@/components/magicui/orbiting-circles';
+import Icons from '@/components/fragments/Icons';
+import { AnimatedListDemo } from '@/components/fragments/AnimatedListDemo';
+import { BlurFadeDemo } from '@/components/fragments/gridimage/BlurFadeDemo';
 const BLUR_FADE_DELAY = 0.04;
 
 export default function Page() {
   return (
     <main className='flex flex-col min-h-[100dvh] space-y-10 '>
+      {/* <SplashCursor /> */}
       <Meteors number={30} />
-      <SplashCursor />
+      {/* <BlobCursor /> */}
       <section id='hero'>
         <div className='mx-auto w-full max-w-2xl space-y-8'>
           <div className='gap-2 flex justify-between'>
-            <div className='flex-col flex flex-1 space-y-1.5'>
+            <div className='flex-col flex flex-1 space-y-1.5 relative z-10'>
               <BlurFadeText
                 delay={BLUR_FADE_DELAY}
-                className='text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none'
+                className='text-3xl font-bold tracking-tighter sm:text-5xl xl:text-5xl/none'
                 yOffset={8}
                 text={`Hi, I'm ${DATA.name.split(' ')[0]} 🥷`}
               />
@@ -38,22 +44,46 @@ export default function Page() {
               />
             </div>
             <BlurFade delay={BLUR_FADE_DELAY}>
-              <Avatar className='size-28 border'>
-                <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
-                <AvatarFallback>{DATA.initials}</AvatarFallback>
-              </Avatar>
+              <div className='relative flex h-[200px] w-[200px] flex-col items-center justify-center overflow-hidden z-0'>
+                <OrbitingCircles iconSize={20}>
+                  <Icons.whatsapp />
+                  <Icons.notion />
+                  <Icons.openai />
+                  <Icons.googleDrive />
+                  <Icons.whatsapp />
+                </OrbitingCircles>
+                <Avatar className='size-28 border'>
+                  <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
+                </Avatar>
+                <OrbitingCircles iconSize={20} radius={70} reverse speed={2}>
+                  <Icons.whatsapp />
+                  <Icons.notion />
+                  <Icons.openai />
+                  <Icons.googleDrive />
+                </OrbitingCircles>
+              </div>
             </BlurFade>
           </div>
         </div>
+        {/* <CardImage /> */}
       </section>
       <section id='about'>
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
           <h2 className='text-xl font-bold'>About</h2>
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
-          <Markdown className='prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert'>
+          <Markdown className='prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert mb-10'>
             {DATA.summary}
           </Markdown>
+        </BlurFade>
+      </section>
+      <section id='image'>
+        <BlurFade delay={BLUR_FADE_DELAY * 3}>
+          <h2 className='text-xl font-bold'>Image Owner</h2>
+        </BlurFade>
+        <BlurFade delay={BLUR_FADE_DELAY * 4}>
+          <Markdown className='prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert mb-10'></Markdown>
+          <BlurFadeDemo />
         </BlurFade>
       </section>
       <section id='work'>
