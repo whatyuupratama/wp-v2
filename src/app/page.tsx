@@ -27,7 +27,7 @@ export default function Page() {
   return (
     <>
       <main className='flex flex-col min-h-[100dvh] space-y-10 '>
-        {/* <SplashCursor /> */}
+        <SplashCursor />
         <Meteors number={30} />
         {/* <BlobCursor /> */}
         <section id='hero'>
