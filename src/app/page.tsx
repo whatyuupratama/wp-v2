@@ -6,10 +6,8 @@ import { ResumeCard } from '@/components/resume-card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Badge } from '@/components/ui/badge';
 import { DATA } from '@/data/resume';
-import Link from 'next/link';
 import Markdown from 'react-markdown';
 import { Meteors } from '@/components/magicui/meteors';
-import Buttonn from '@/components/fragments/Buttonn';
 import { InteractiveHoverButtonDemo } from '../components/fragments/InteractiveHoverButtonDemo';
 import SplashCursor from '../components/fragments/cursor/SplashCursor';
 import { MarqueeDemo } from '@/components/fragments/MarqueeDemo';
@@ -17,11 +15,13 @@ import { AnimatedBeamDemo } from '@/components/fragments/AnimatedBeamDemo';
 import BlobCursor from '@/components/fragments/cursor/BlobCursor';
 import { OrbitingCircles } from '@/components/magicui/orbiting-circles';
 import Icons from '@/components/fragments/Icons';
-import { AnimatedListDemo } from '@/components/fragments/AnimatedListDemo';
 import { BlurFadeDemo } from '@/components/fragments/gridimage/BlurFadeDemo';
 import TrueFocus from '@/components/fragments/textfocus/TrueFocus';
-import Head from 'next/head';
 import Lanyard from '@/components/Lanyard/Lanyard';
+import GitHubCalendar from 'react-github-calendar';
+// import { InteractiveGridPatternDemo } from '@/components/fragments/background/InteractiveGridPatternDemo';
+import RotatingText from '@/components/fragments/rotatetxt/RotatingText';
+
 const BLUR_FADE_DELAY = 0.04;
 
 export default function Page() {
@@ -30,17 +30,11 @@ export default function Page() {
       <main className='flex flex-col min-h-[100dvh] space-y-10 '>
         <SplashCursor />
         <Meteors number={30} />
-        {/* <BlobCursor /> */}
+        {/* <InteractiveGridPatternDemo /> */}
         <section id='hero'>
           <div className='mx-auto w-full max-w-2xl space-y-8'>
             <div className='gap-2 flex justify-between'>
               <div className='flex-col flex flex-1 space-y-1.5 relative z-10'>
-                {/* <BlurFadeText
-                delay={BLUR_FADE_DELAY}
-                className='text-3xl font-bold tracking-tighter sm:text-5xl xl:text-5xl/none'
-                yOffset={8}
-                text={`Hi, I'm ${DATA.name.split(' ')[0]} 🥷`}
-              /> */}
                 <TrueFocus
                   sentence={`Hi, I'm Wahyu 🥷`}
                   manualMode={false}
@@ -49,11 +43,6 @@ export default function Page() {
                   animationDuration={2}
                   pauseBetweenAnimations={1}
                 />
-                {/* <BlurFadeText
-                  className='max-w-[600px] md:text-xl'
-                  delay={BLUR_FADE_DELAY}
-                  text={DATA.description}
-                /> */}
                 <BlurFadeText
                   className='max-w-[600px] md:text-xl'
                   delay={BLUR_FADE_DELAY}
@@ -87,7 +76,22 @@ export default function Page() {
         </section>
         <section id='about'>
           <BlurFade delay={BLUR_FADE_DELAY * 3}>
-            <h2 className='text-xl font-bold'>About</h2>
+            {/* <h2 className='text-xl font-bold'>About</h2> */}
+            <div className='flex gap-2 items-center'>
+              <span className='font-extrabold text-lg'>Daily</span>{' '}
+              <RotatingText
+                texts={['Eat', 'Coding', 'Hiling', 'Pray!', 'Sleep']}
+                mainClassName='text-lg inline-block px-2 sm:px-2 md:px-3 bg-cyan-300 text-black overflow-hidden py-0.5 sm:py-1 md:py-1 justify-center rounded-lg font-extrabold'
+                staggerFrom={'last'}
+                initial={{ y: '100%' }}
+                animate={{ y: 0 }}
+                exit={{ y: '-120%' }}
+                staggerDuration={0.025}
+                splitLevelClassName='overflow-hidden pb-0.5 sm:pb-1 md:pb-1'
+                transition={{ type: 'spring', damping: 30, stiffness: 400 }}
+                rotationInterval={2000}
+              />{' '}
+            </div>
           </BlurFade>
           <BlurFade delay={BLUR_FADE_DELAY * 4}>
             <Markdown className='prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert mb-10'>
@@ -104,6 +108,7 @@ export default function Page() {
             <BlurFadeDemo />
           </BlurFade>
         </section>
+
         <section id='work'>
           <div className='flex min-h-0 flex-col gap-y-3'>
             <BlurFade delay={BLUR_FADE_DELAY * 5}>
@@ -204,6 +209,7 @@ export default function Page() {
                 </BlurFade>
               ))}
             </div>
+            <GitHubCalendar username='whatyuupratama' />
           </div>
           <InteractiveHoverButtonDemo
             link='https://github.com/wahyupratamaaa'
@@ -269,8 +275,8 @@ export default function Page() {
                 </h2>
               </div>
             </BlurFade>
+            <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} />
           </div>
-          <Lanyard position={[0, 0, 15]} gravity={[0, -40, 0]} />
           <MarqueeDemo />
         </section>
       </main>
