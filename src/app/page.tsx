@@ -21,6 +21,7 @@ import { AnimatedListDemo } from '@/components/fragments/AnimatedListDemo';
 import { BlurFadeDemo } from '@/components/fragments/gridimage/BlurFadeDemo';
 import TrueFocus from '@/components/fragments/textfocus/TrueFocus';
 import Head from 'next/head';
+import Lanyard from '@/components/Lanyard/Lanyard';
 const BLUR_FADE_DELAY = 0.04;
 
 export default function Page() {
@@ -269,6 +270,7 @@ export default function Page() {
               </div>
             </BlurFade>
           </div>
+          <Lanyard position={[0, 0, 15]} gravity={[0, -40, 0]} />
           <MarqueeDemo />
         </section>
       </main>
