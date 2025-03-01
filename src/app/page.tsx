@@ -204,6 +204,10 @@ export default function Page() {
               ))}
             </div>
           </div>
+          <InteractiveHoverButtonDemo
+            link='https://github.com/wahyupratamaaa'
+            value='More on my Github'
+          />
         </section>
         <section id='hackathons'>
           <div className='space-y-12 w-full py-12'>
@@ -245,7 +249,10 @@ export default function Page() {
                 ))}
               </ul>
 
-              <InteractiveHoverButtonDemo />
+              <InteractiveHoverButtonDemo
+                link='https://www.linkedin.com/in/wahyupratamaa/'
+                value='More on my LinkedIn'
+              />
             </BlurFade>
           </div>
         </section>

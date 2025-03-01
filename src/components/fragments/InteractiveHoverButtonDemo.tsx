@@ -1,10 +1,19 @@
 import { InteractiveHoverButton } from '@/components/magicui/interactive-hover-button';
 import Link from 'next/link';
 
-export function InteractiveHoverButtonDemo() {
+type SetButtonProps = {
+  link: string;
+  value: string;
+  className?: string;
+};
+export function InteractiveHoverButtonDemo({
+  link,
+  value,
+  className,
+}: SetButtonProps) {
   return (
-    <Link href='https://www.linkedin.com/in/wahyupratamaa/' passHref>
-      <InteractiveHoverButton>More on my LinkedIn</InteractiveHoverButton>
+    <Link href={link} className={className}>
+      <InteractiveHoverButton>{value}</InteractiveHoverButton>
     </Link>
   );
 }

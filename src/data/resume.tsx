@@ -5,7 +5,7 @@ export const DATA = {
   name: 'Wahyu Pratama',
   initials: 'DV',
   location: 'Malang,idn',
-  description: `College Student turned Frontend Developer, Active on <a class="underline decoration-blue-500">GDG Surabaya</a>, <a class="underline decoration-pink-500">TikTok</a>,<a class="underline decoration-pink-500">Linkedin</a>,and <a class="underline decoration-blue-500">Medium</a>.`,
+  description: `College Student turned Frontend Engineer, Active on <a class="underline decoration-blue-500">GDG Surabaya</a>, <a class="underline decoration-pink-500">TikTok</a>,<a class="underline decoration-pink-500">Linkedin</a>,and <a class="underline decoration-blue-500">Medium</a>.`,
   summary:
     'I am interested in spending 10 hours every day to study from June 12, 2024 until now, Interested in exploring different design styles and following design and technology trends for software development.',
   avatarUrl: '/met.jpeg',
@@ -201,6 +201,21 @@ export const DATA = {
         {
           type: 'Github',
           href: 'https://github.com/wahyupratamaaa/kemnakercred17',
+          icon: <Icons.github className='size-3' />,
+        },
+      ],
+      image: '',
+    },
+    {
+      title: 'Vote-App',
+      active: true,
+      description:
+        'Vote App is a simple, fast, and secure digital voting app. With engaging animations and a clean design, it allows the people of Malang City to vote easily. Vote-App is also open source, allowing other developers to contribute.',
+      technologies: ['NextJs', 'Tailwind', 'NextAuth', 'Prisma', 'TypeScript'],
+      links: [
+        {
+          type: 'Github',
+          href: 'https://github.com/wahyupratamaaa/vote-ts',
           icon: <Icons.github className='size-3' />,
         },
       ],
