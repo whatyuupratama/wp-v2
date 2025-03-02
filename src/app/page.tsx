@@ -30,7 +30,6 @@ export default function Page() {
       <main className='flex flex-col min-h-[100dvh] space-y-10 '>
         <SplashCursor />
         <Meteors number={30} />
-        {/* <InteractiveGridPatternDemo /> */}
         <section id='hero'>
           <div className='mx-auto w-full max-w-2xl space-y-8'>
             <div className='gap-2 flex justify-between'>
@@ -172,7 +171,6 @@ export default function Page() {
           </div>
           <AnimatedBeamDemo />
         </section>
-
         <section id='projects'>
           <div className='space-y-12 w-full py-12'>
             <BlurFade delay={BLUR_FADE_DELAY * 11}>
