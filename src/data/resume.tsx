@@ -7,7 +7,7 @@ export const DATA = {
   location: 'Malang,idn',
   description: `College Student turned Frontend Engineer, Active on <a class="underline decoration-blue-500">GDG Surabaya</a>, <a class="underline decoration-pink-500">TikTok</a>,<a class="underline decoration-pink-500">Linkedin</a>,and <a class="underline decoration-blue-500">Medium</a>.`,
   summary:
-    'I am interested in spending 10 hours every day to study from June 12, 2024 until now, Interested in exploring different design styles and following design and technology trends for software development.',
+    'At the age of 20, I am interested in spending 10 hours every day to study from June 12, 2024 until now, interested in exploring different design styles and following design and technology trends for software development',
   avatarUrl: '/met.jpeg',
   skills: [
     'JavaScript',

@@ -21,10 +21,27 @@ import Lanyard from '@/components/Lanyard/Lanyard';
 import GitHubCalendar from 'react-github-calendar';
 // import { InteractiveGridPatternDemo } from '@/components/fragments/background/InteractiveGridPatternDemo';
 import RotatingText from '@/components/fragments/rotatetxt/RotatingText';
+import InfiniteScroll from '@/components/fragments/infinityscroll/InfiniteScroll';
 
 const BLUR_FADE_DELAY = 0.04;
 
 export default function Page() {
+  const items = [
+    { content: 'Stay positive!' },
+    { content: <p>Believe in yourself!</p> },
+    { content: 'You can do it!' },
+    { content: <p>Keep pushing forward!</p> },
+    { content: 'Never give up!' },
+    { content: <p>Stay strong!</p> },
+    { content: 'Keep smiling!' },
+    { content: <p>You got this!</p> },
+    { content: 'Stay motivated!' },
+    { content: <p>Keep up the good work!</p> },
+    { content: 'Stay focused!' },
+    { content: <p>Keep going!</p> },
+    { content: 'Believe in your dreams!' },
+    { content: <p>Stay determined!</p> },
+  ];
   return (
     <>
       <main className='flex flex-col min-h-[100dvh] space-y-10 '>
@@ -261,6 +278,17 @@ export default function Page() {
             </BlurFade>
           </div>
         </section>
+        <div style={{ height: '500px', position: 'relative' }}>
+          <InfiniteScroll
+            items={items}
+            isTilted={true}
+            tiltDirection='left'
+            autoplay={true}
+            autoplaySpeed={0.5}
+            autoplayDirection='up'
+            pauseOnHover={true}
+          />
+        </div>
         <section id='contact'>
           <div className='grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12'>
             <BlurFade delay={BLUR_FADE_DELAY * 16}>
