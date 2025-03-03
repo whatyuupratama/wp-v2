@@ -89,6 +89,9 @@ export default function Page() {
             </div>
           </div>
           {/* <CardImage /> */}
+          <div style={{ height: '500px', position: 'relative' }}>
+            <InfiniteScroll />
+          </div>
         </section>
         <section id='about'>
           <BlurFade delay={BLUR_FADE_DELAY * 3}>
@@ -278,17 +281,7 @@ export default function Page() {
             </BlurFade>
           </div>
         </section>
-        <div style={{ height: '500px', position: 'relative' }}>
-          <InfiniteScroll
-            items={items}
-            isTilted={true}
-            tiltDirection='left'
-            autoplay={true}
-            autoplaySpeed={0.5}
-            autoplayDirection='up'
-            pauseOnHover={true}
-          />
-        </div>
+
         <section id='contact'>
           <div className='grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12'>
             <BlurFade delay={BLUR_FADE_DELAY * 16}>
