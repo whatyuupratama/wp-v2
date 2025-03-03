@@ -1,5 +1,5 @@
-import { cn } from "@/lib/utils";
-import React from "react";
+import { cn } from '@/lib/utils';
+import React from 'react';
 
 export interface OrbitingCirclesProps
   extends React.HTMLAttributes<HTMLDivElement> {
@@ -30,16 +30,16 @@ export function OrbitingCircles({
     <>
       {path && (
         <svg
-          xmlns="http://www.w3.org/2000/svg"
-          version="1.1"
-          className="pointer-events-none absolute inset-0 size-full"
+          xmlns='http://www.w3.org/2000/svg'
+          version='1.1'
+          className='pointer-events-none absolute inset-0 size-full'
         >
           <circle
-            className="stroke-black/10 stroke-1 dark:stroke-white/10"
-            cx="50%"
-            cy="50%"
+            className='stroke-black/10 stroke-1 dark:stroke-white/10'
+            cx='50%'
+            cy='50%'
             r={radius}
-            fill="none"
+            fill='none'
           />
         </svg>
       )}
@@ -49,16 +49,16 @@ export function OrbitingCircles({
           <div
             style={
               {
-                "--duration": calculatedDuration,
-                "--radius": radius,
-                "--angle": angle,
-                "--icon-size": `${iconSize}px`,
+                '--duration': calculatedDuration,
+                '--radius': radius,
+                '--angle': angle,
+                '--icon-size': `${iconSize}px`,
               } as React.CSSProperties
             }
             className={cn(
               `absolute flex size-[var(--icon-size)] transform-gpu animate-orbit items-center justify-center rounded-full`,
-              { "[animation-direction:reverse]": reverse },
-              className,
+              { '[animation-direction:reverse]': reverse },
+              className
             )}
             {...props}
           >
