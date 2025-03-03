@@ -2,12 +2,27 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: [
-      'avatar.vercel.sh',
-      'media.licdn.com',
-      'p16-sign-va.tiktokcdn.com',
-      'avatars.githubusercontent.com',
-      'instagram.fsub8-2.fna.fbcdn.net',
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'avatar.vercel.sh',
+      },
+      {
+        protocol: 'https',
+        hostname: 'media.licdn.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'p16-sign-va.tiktokcdn.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'avatars.githubusercontent.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'instagram.fsub8-2.fna.fbcdn.net',
+      },
     ],
   },
 };

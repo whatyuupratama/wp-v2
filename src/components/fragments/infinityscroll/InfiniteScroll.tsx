@@ -274,7 +274,7 @@ const InfiniteScroll: React.FC = () => {
                     height={30}
                     className='rounded-full'
                   />
-                  <span className='text-sm'>{item.Username}</span>
+                  <span className='text-xs'>{item.Username}</span>
                 </div>
                 <div className='flex gap-2 items-center'>
                   <Image

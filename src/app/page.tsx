@@ -98,7 +98,14 @@ export default function Page() {
             <div className='flex gap-2 items-center'>
               <span className='font-extrabold text-lg'>Daily</span>{' '}
               <RotatingText
-                texts={['Eat', 'Coding', 'Hiling', 'Pray!', 'Sleep']}
+                texts={[
+                  'eat',
+                  'sleep',
+                  'coding',
+                  'healing',
+                  'player',
+                  'nr aerox',
+                ]}
                 mainClassName='text-lg inline-block px-2 sm:px-2 md:px-3 bg-cyan-300 text-black overflow-hidden py-0.5 sm:py-1 md:py-1 justify-center rounded-lg font-extrabold'
                 staggerFrom={'last'}
                 initial={{ y: '100%' }}
