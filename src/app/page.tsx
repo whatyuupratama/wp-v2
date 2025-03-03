@@ -26,22 +26,6 @@ import InfiniteScroll from '@/components/fragments/infinityscroll/InfiniteScroll
 const BLUR_FADE_DELAY = 0.04;
 
 export default function Page() {
-  const items = [
-    { content: 'Stay positive!' },
-    { content: <p>Believe in yourself!</p> },
-    { content: 'You can do it!' },
-    { content: <p>Keep pushing forward!</p> },
-    { content: 'Never give up!' },
-    { content: <p>Stay strong!</p> },
-    { content: 'Keep smiling!' },
-    { content: <p>You got this!</p> },
-    { content: 'Stay motivated!' },
-    { content: <p>Keep up the good work!</p> },
-    { content: 'Stay focused!' },
-    { content: <p>Keep going!</p> },
-    { content: 'Believe in your dreams!' },
-    { content: <p>Stay determined!</p> },
-  ];
   return (
     <>
       <main className='flex flex-col min-h-[100dvh] space-y-10 '>
@@ -71,6 +55,7 @@ export default function Page() {
                   <OrbitingCircles iconSize={20}>
                     <Icons.typescript />
                     <Icons.copilot />
+                    <Icons.copilot />
                     <Icons.react />
                     <Icons.nextjs />
                   </OrbitingCircles>
@@ -79,6 +64,7 @@ export default function Page() {
                   </Avatar>
                   <OrbitingCircles iconSize={20} radius={70} reverse speed={2}>
                     <Icons.typescript />
+                    <Icons.copilot />
                     <Icons.copilot />
                     <Icons.react />
                     <Icons.nextjs />
@@ -99,12 +85,12 @@ export default function Page() {
               <span className='font-extrabold text-lg'>Daily</span>{' '}
               <RotatingText
                 texts={[
-                  'eat',
-                  'sleep',
-                  'coding',
-                  'healing',
-                  'player',
-                  'nr aerox',
+                  'eat ',
+                  'sleep ',
+                  'coding ',
+                  'healing ',
+                  'prayer',
+                  'nr aerox ',
                 ]}
                 mainClassName='text-lg inline-block px-2 sm:px-2 md:px-3 bg-cyan-300 text-black overflow-hidden py-0.5 sm:py-1 md:py-1 justify-center rounded-lg font-extrabold'
                 staggerFrom={'last'}
