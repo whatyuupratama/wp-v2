@@ -55,7 +55,7 @@ export default function Page() {
                   <OrbitingCircles iconSize={20}>
                     <Icons.typescript />
                     <Icons.copilot />
-                    <Icons.copilot />
+                    <Icons.tailwindcss />
                     <Icons.react />
                     <Icons.nextjs />
                   </OrbitingCircles>
@@ -65,7 +65,7 @@ export default function Page() {
                   <OrbitingCircles iconSize={20} radius={70} reverse speed={2}>
                     <Icons.typescript />
                     <Icons.copilot />
-                    <Icons.copilot />
+                    <Icons.tailwindcss />
                     <Icons.react />
                     <Icons.nextjs />
                   </OrbitingCircles>
