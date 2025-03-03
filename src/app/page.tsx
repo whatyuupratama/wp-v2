@@ -69,20 +69,19 @@ export default function Page() {
               <BlurFade delay={BLUR_FADE_DELAY}>
                 <div className='relative flex h-[200px] w-[200px] flex-col items-center justify-center overflow-hidden z-0'>
                   <OrbitingCircles iconSize={20}>
-                    <Icons.whatsapp />
-                    <Icons.notion />
-                    <Icons.openai />
-                    <Icons.googleDrive />
-                    <Icons.whatsapp />
+                    <Icons.typescript />
+                    <Icons.copilot />
+                    <Icons.react />
+                    <Icons.nextjs />
                   </OrbitingCircles>
                   <Avatar className='size-28 border'>
                     <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
                   </Avatar>
                   <OrbitingCircles iconSize={20} radius={70} reverse speed={2}>
-                    <Icons.whatsapp />
-                    <Icons.notion />
-                    <Icons.openai />
-                    <Icons.googleDrive />
+                    <Icons.typescript />
+                    <Icons.copilot />
+                    <Icons.react />
+                    <Icons.nextjs />
                   </OrbitingCircles>
                 </div>
               </BlurFade>
