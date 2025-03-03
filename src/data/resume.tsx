@@ -10,6 +10,8 @@ export const DATA = {
     'At the age of 20, I am interested in spending 10 hours every day to study from June 12, 2024 until now, interested in exploring different design styles and following design and technology trends for software development',
   avatarUrl: '/met.jpeg',
   skills: [
+    'Copilot',
+
     'JavaScript',
     'React',
     'NextJs',
