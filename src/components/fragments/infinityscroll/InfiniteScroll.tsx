@@ -12,6 +12,7 @@ interface SocialMediaItem {
   Suka?: string; // Optional property
   Repository?: number; // Optional property
   Link: string;
+  Username?: string;
 }
 
 interface InfinitySosmed {
@@ -29,6 +30,8 @@ const infinitysosmed: InfinitySosmed = {
         'https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/9685129468f53b75801dd179916031cc~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=14579&nonce=48433&refresh_token=88e8b61dfa96cc974aa79f1bb731eb35&x-expires=1741158000&x-signature=FWNGUIWVDxPtyIuEU%2Fp1Kq583nA%3D&idc=sg1&ps=13740610&shcp=81f88b70&shp=a5d48078&t=4d5b0474',
       Pengikut: 1452,
       Mengikuti: 0,
+      Username: 'cafetiramisy u🔖',
+
       Suka: '298.9K',
       Link: 'https://www.tiktok.com/@vitamindc_',
     },
@@ -37,6 +40,7 @@ const infinitysosmed: InfinitySosmed = {
         'https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/697fb49551cb6a197ba191ed4903881b~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=14579&nonce=57575&refresh_token=0cec60d7b30c241fcf7d2a231aca01e1&x-expires=1741158000&x-signature=lSOXgHhQR2PYck9YnvzRx8Tq7KQ%3D&idc=sg1&ps=13740610&shcp=81f88b70&shp=a5d48078&t=4d5b0474',
       Pengikut: 687,
       Mengikuti: 6,
+      Username: 'archivesc.w2',
       Suka: '124.2K',
       Link: 'https://www.tiktok.com/@archivesc.w2',
     },
@@ -47,6 +51,8 @@ const infinitysosmed: InfinitySosmed = {
         'https://media.licdn.com/dms/image/v2/D5603AQHX47A8cgf__A/profile-displayphoto-shrink_400_400/B56ZSm2HleHwAg-/0/1737965993781?e=1746662400&v=beta&t=HTJUFEd6tQvhP9LCqYU7iCaQWVLJhcy3kHOXNXGaAF0',
       Pengikut: 1.625,
       Mengikuti: 48,
+      Username: 'Wahyu Pratama',
+
       Link: 'https://www.linkedin.com/in/wahyupratamaa/',
     },
   ],
@@ -55,6 +61,8 @@ const infinitysosmed: InfinitySosmed = {
       Profile:
         'https://media.licdn.com/dms/image/v2/D5603AQHX47A8cgf__A/profile-displayphoto-shrink_400_400/B56ZSm2HleHwAg-/0/1737965993781?e=1746662400&v=beta&t=HTJUFEd6tQvhP9LCqYU7iCaQWVLJhcy3kHOXNXGaAF0',
       Pengikut: 3,
+      Username: 'Wahyu Pratama',
+
       Link: 'https://medium.com/@wahyupratama_',
     },
   ],
@@ -64,6 +72,7 @@ const infinitysosmed: InfinitySosmed = {
       Pengikut: 5,
       Mengikuti: 7,
       Repository: 45,
+      Username: 'whatyuupratama',
       Link: 'https://github.com/whatyuupratama',
     },
   ],
@@ -73,7 +82,8 @@ const infinitysosmed: InfinitySosmed = {
         'https://instagram.fsub8-2.fna.fbcdn.net/v/t51.2885-19/481830789_1200112991444395_3563037592228029706_n.jpg?_nc_ht=instagram.fsub8-2.fna.fbcdn.net&_nc_cat=107&_nc_oc=Q6cZ2AFtM9VPM02bK7dIyqJTqNmCGAvcMSGKnNgbcKG24Ow0Puq0Qse6oGyKQnV9bETV3Da8cztSIzoWwCR1InTt1Dxv&_nc_ohc=sqRDa7Va8h8Q7kNvgFHWH4d&_nc_gid=04d056eaca8b40dfb783e389a475610e&edm=AP4sbd4BAAAA&ccb=7-5&oh=00_AYCVQfx2_aeZmUbJXHRr3uAC5qz8X2MyA7WmCAa_BQLZ0A&oe=67CB1DAA&_nc_sid=7a9f4b',
       Pengikut: 2.643,
       Mengikuti: 634,
-      Link: 'https://github.com/whatyuupratama',
+      Username: 'archivesc.w2',
+      Link: 'https://www.instagram.com/archivesc.w2/',
     },
   ],
 };
@@ -256,13 +266,16 @@ const InfiniteScroll: React.FC = () => {
                 rel='noopener noreferrer'
                 className='card-link'
               >
-                <Image
-                  src={item.Profile}
-                  alt={'image'}
-                  width={30}
-                  height={30}
-                  className='rounded-full'
-                />
+                <div className='flex items-center gap-2'>
+                  <Image
+                    src={item.Profile}
+                    alt={'image'}
+                    width={30}
+                    height={30}
+                    className='rounded-full'
+                  />
+                  <span className='text-sm'>{item.Username}</span>
+                </div>
                 <div className='flex gap-2 items-center'>
                   <Image
                     src={getPath(item.type)}
