@@ -227,7 +227,7 @@ export default function Page() {
             <GitHubCalendar username='whatyuupratama' />
           </div>
           <InteractiveHoverButtonDemo
-            link='https://github.com/wahyupratamaaa'
+            link='https://github.com/whatyuupratama'
             value='More on my Github'
           />
         </section>

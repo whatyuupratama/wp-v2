@@ -45,7 +45,7 @@ export const DATA = {
       },
       GitHub: {
         name: 'GitHub',
-        url: 'https://github.com/wahyupratamaaa',
+        url: 'https://github.com/whatyuupratama',
         icon: Icons.github,
 
         navbar: true,
