@@ -11,7 +11,6 @@ export const DATA = {
   avatarUrl: '/met.jpeg',
   skills: [
     'Vertex Chat',
-
     'JavaScript',
     'React',
     'NextJs',
@@ -241,6 +240,21 @@ export const DATA = {
           type: 'Github',
           href: 'https://github.com/wahyupratamaaa/conselingasia ',
           icon: <Icons.github className='size-3' />,
+        },
+      ],
+      image: '',
+    },
+    {
+      title: 'Analisis Sewa Sepeda dari Dataset Bike Sharing',
+      active: true,
+      description:
+        'This dashboard allows users to dynamically explore the bike-sharing data through interactive charts and tables. It provides insights into bike rental trends based on factors like time, weather conditions, and demographics. The visualizations help users understand patterns in bike usage and make data-driven decisions.',
+      technologies: ['Python', 'Jupyter Notebook'],
+      links: [
+        {
+          type: 'Website',
+          href: 'https://whatyuupratama-belajar-analisis-data--dashboardstreamlit-f4qxhz.streamlit.app/a ',
+          icon: <Icons.globe className='size-3' />,
         },
       ],
       image: '',
