@@ -178,7 +178,9 @@ export default function Page() {
                 <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
                   <Badge
                     key={skill}
-                    className={skill === 'Copilot' ? 'bg-black' : 'bg-zinc-200'}
+                    className={
+                      skill === 'Vertex Chat' ? 'bg-black' : 'bg-zinc-200'
+                    }
                   >
                     {skill}
                   </Badge>
