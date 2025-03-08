@@ -23,6 +23,10 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'instagram.fsub8-2.fna.fbcdn.net',
       },
+      {
+        protocol: 'https',
+        hostname: 'aceternity.com',
+      },
     ],
   },
 };

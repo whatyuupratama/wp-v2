@@ -22,7 +22,7 @@ import GitHubCalendar from 'react-github-calendar';
 // import { InteractiveGridPatternDemo } from '@/components/fragments/background/InteractiveGridPatternDemo';
 import RotatingText from '@/components/fragments/rotatetxt/RotatingText';
 import InfiniteScroll from '@/components/fragments/infinityscroll/InfiniteScroll';
-
+import { HeroParallaxDemo } from '@/components/fragments/aceternity/HeroParallaxDemo';
 const BLUR_FADE_DELAY = 0.04;
 
 export default function Page() {
@@ -296,6 +296,7 @@ export default function Page() {
             <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} />
           </div>
           <MarqueeDemo />
+          <HeroParallaxDemo />
         </section>
       </main>
     </>
