@@ -23,6 +23,7 @@ import GitHubCalendar from 'react-github-calendar';
 import RotatingText from '@/components/fragments/rotatetxt/RotatingText';
 import InfiniteScroll from '@/components/fragments/infinityscroll/InfiniteScroll';
 import { HeroParallaxDemo } from '@/components/fragments/aceternity/HeroParallaxDemo';
+import { LinkPreviewDemo } from '@/components/fragments/aceternity/LinkPreviewDemo';
 const BLUR_FADE_DELAY = 0.04;
 
 export default function Page() {
@@ -297,6 +298,7 @@ export default function Page() {
           </div>
           <MarqueeDemo />
           <HeroParallaxDemo />
+          <LinkPreviewDemo />
         </section>
       </main>
     </>
